@@ -1,0 +1,16 @@
+package edu.ucne.registroempleados.data.local
+
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+import kotlinx.datetime.LocalDate
+
+@Entity(tableName = "Empleados")
+data class EmpleadoEntity(
+    @PrimaryKey(autoGenerate = true)
+    val empleadoId: Int,
+    val fechaIngreso: LocalDate,
+    val nombres: String,
+    val sexo: String,
+    val sueldo: Double
+)
+
