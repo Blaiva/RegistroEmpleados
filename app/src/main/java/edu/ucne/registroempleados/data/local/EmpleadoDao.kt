@@ -14,7 +14,7 @@ interface EmpleadoDao {
     fun listar(): Flow<List<EmpleadoEntity>>
 
     @Query("SELECT * FROM Empleados WHERE empleadoId = :id")
-    suspend fun buscar(id: Int)
+    suspend fun buscar(id: Int): EmpleadoEntity?
 
     @Query("DELETE FROM Empleados WHERE empleadoId = :id")
     suspend fun eliminar(id: Int)
